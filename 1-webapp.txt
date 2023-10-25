@@ -39,7 +39,7 @@ resource "azurerm_subnet" "db" {
   address_prefixes     = ["10.0.3.0/24"]
 }
 
-# Create virtual machines for each tier (simplified, adjust as needed)
+# Create virtual machines for each tier
 resource "azurerm_linux_virtual_machine" "web" {
   count                = 2
   name                 = "web-vm-${count.index}"
